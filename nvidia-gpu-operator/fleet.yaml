@@ -1,0 +1,19 @@
+defaultNamespace: gpu-operator
+helm:
+  repo: https://helm.ngc.nvidia.com/nvidia
+  chart: gpu-operator
+  releaseName: gpu-operator
+  version: "v24.6.2" ## https://github.com/NVIDIA/gpu-operator/issues/1109
+  values:
+    toolkit:
+      env:
+        - name: CONTAINERD_CONFIG
+          value: /var/lib/rancher/rke2/agent/etc/containerd/config.toml.tmpl
+        - name: CONTAINERD_SOCKET
+          value: /run/k3s/containerd/containerd.sock
+        - name: CONTAINERD_RUNTIME_CLASS
+          value: nvidia
+        - name: CONTAINERD_SET_AS_DEFAULT
+          value: "true"
+labels:
+  app: nvidia-operator

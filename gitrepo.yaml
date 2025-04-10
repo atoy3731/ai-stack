@@ -1,0 +1,17 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: ai-stack
+  namespace: fleet-default
+spec:
+  repo: ssh://git@git-ssh.atoy.lol/home/ai-stack.git
+  clientSecretName: private-key
+  targets:
+  - name: ai
+    clusterSelector:
+      matchLabels:
+        cluster: ai
+  paths:
+  - ./nvidia-gpu-operator
+  - ./ollama
+  - ./open-webui

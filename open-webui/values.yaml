@@ -1,0 +1,42 @@
+ollama:
+  enabled: false
+
+backend:
+  url: http://ollama.ollama:11434
+
+ollamaUrls:
+  - http://ollama.ollama:11434
+
+# service:
+#   type: LoadBalancer
+#   ports:
+#     - name: http
+#       port: 80
+#       targetPort: 8080
+#       protocol: TCP
+#       # loadBalancerIP: 10.0.1.246
+#   annotations:
+#     # metallb.universe.tf/address-pool: default
+#     cloudprovider.harvesterhci.io/ipam: pool
+#     # kube-vip.io/requestedIP: 10.0.1.245
+#     # kube-vip.io/loadbalancerIPs: 0.0.0.0
+#     # kube-vip.io/requestedIP: 10.0.1.70
+#     cloudprovider.harvesterhci.io/healthcheck-port: "8080"   # Ensure the port is a string as required by some annotation formats
+#     # cloudprovider.harvesterhci.io/healthcheck-path: "/healthz"
+
+ingress:
+  enabled: true
+  host: ai.atoy.lol
+  annotations:
+    gethomepage.dev/name: Ollama OpenWeb-UI
+    gethomepage.dev/group: AI
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/description: Local Aye-EYYYYE
+    gethomepage.dev/icon: "https://openwebui.com/favicon.png"
+    
+#extraEnvVars:
+#  - name: OPENAI_API_BASE_URL
+#    value: "http://ollama.ollama.svc.cluster.local:11434"
+env:
+ - name: WEBUI_AUTH
+   value: "False"  # Setting WEBUI_AUTH to False

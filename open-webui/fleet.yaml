@@ -1,0 +1,11 @@
+defaultNamespace: open-webui
+
+labels:
+  app: openweb-ui
+
+helm:
+  repo: https://helm.openwebui.com/
+  chart: open-webui
+  releaseName: openweb-ui
+  valuesFiles:
+  - ./values.yaml

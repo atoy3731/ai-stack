@@ -1,0 +1,52 @@
+persistentVolume:
+  enabled: true
+  size: "60Gi"
+
+ollama:
+  gpu:
+    enabled: true
+    type: 'nvidia'
+    number: 1
+  models:
+    - mistral
+    - codellama
+#    - llava
+    - llama3
+
+extraEnv: 
+ - name: OLLAMA_DEBUG
+   value: "1"
+ - name: OLLAMA_KEEP_ALIVE=24h
+   value: "24h"
+ - name: ENABLE_IMAGE_GENERATION
+   value: "True"
+ - name: COMFYUI_BASE_URL
+   value: "http://stable-diffusion-webui:7860"
+
+
+
+# image:
+#   repository: fizzbuzz2/ollama
+#   tag: latest
+#   pullPolicy: Always
+# imagePullSecrets:
+#   - name: registry-credentials
+#runtimeClass: nvidia
+# extraEnv:
+#   - name: NVIDIA_VISIBLE_DEVICES
+#     value: all
+  # - name: NVARCH
+  #   value: x86_64
+  # - name: NV_CUDA_CUDART_VERSION
+  #   value: 12.3.2
+  # - name: NVIDIA_DRIVER_CAPABILITIES
+  #   value: all
+# extraArgs:
+#   - --gpu=all
+
+# autoscaling:
+#   enabled: true
+#   minReplicas: 1
+#   maxReplicas: 2
+#   targetCPUUtilizationPercentage: 80
+#   targetMemoryUtilizationPercentage: 80

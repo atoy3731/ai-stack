@@ -1,0 +1,15 @@
+defaultNamespace: ollama
+helm:
+  repo: https://otwld.github.io/ollama-helm/
+  releaseName: ollama
+  chart: ollama
+  valuesFiles:
+  - ./values.yaml
+
+labels:
+  app: ollama
+
+dependsOn:
+- selector:
+    matchLabels:
+      app: nvidia-operator
