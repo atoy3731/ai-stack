@@ -1,6 +1,6 @@
 persistentVolume:
   enabled: true
-  size: "60Gi"
+  size: "30Gi"
 
 ollama:
   gpu:
