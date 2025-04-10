@@ -13,6 +13,8 @@ ollama:
       - codellama
       - llama3
 
+runtimeClassName: nvidia
+
 extraEnv:  []
 #  - name: OLLAMA_DEBUG
 #    value: "1"
