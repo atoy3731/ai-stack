@@ -8,10 +8,10 @@ ollama:
     type: 'nvidia'
     number: 1
   models:
-    - mistral
-    - codellama
-#    - llava
-    - llama3
+    pull:
+      - mistral
+      - codellama
+      - llama3
 
 extraEnv: 
  - name: OLLAMA_DEBUG
