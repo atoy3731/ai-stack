@@ -5,6 +5,8 @@ helm:
   releaseName: gpu-operator
   version: "v24.6.2" ## https://github.com/NVIDIA/gpu-operator/issues/1109
   values:
+    driver:
+      version: "535.129.03"
     toolkit:
       env:
         - name: CONTAINERD_CONFIG
