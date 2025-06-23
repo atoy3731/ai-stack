@@ -4,7 +4,7 @@ metadata:
   name: ai-stack
   namespace: fleet-default
 spec:
-  repo: ssh://git@git-ssh.atoy.lol/home/ai-stack.git
+  repo: git@github.com:atoy3731/ai-stack.git
   branch: main
   clientSecretName: private-key
   targets:
