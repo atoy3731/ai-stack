@@ -20,7 +20,6 @@ helm:
           value: nvidia
         - name: CONTAINERD_SET_AS_DEFAULT
           value: "true"
-        - name: NVIDIA_DISABLE_REQUIRE
-          value: "true"
+
 labels:
   app: nvidia-operator
