@@ -6,7 +6,7 @@ helm:
   version: "v24.6.2" ## https://github.com/NVIDIA/gpu-operator/issues/1109
   values:
     driver:
-      enabled: false
+      enabled: true
     devicePlugin:
       enabled: true
     toolkit:
