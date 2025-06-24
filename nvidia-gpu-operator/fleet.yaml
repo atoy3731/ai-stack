@@ -4,22 +4,9 @@ helm:
   chart: gpu-operator
   releaseName: gpu-operator
   version: "v24.6.2" ## https://github.com/NVIDIA/gpu-operator/issues/1109
-  values:
-    driver:
-      enabled: false
-    devicePlugin:
-      enabled: true
-    toolkit:
-      enabled: true
-      env:
-        - name: CONTAINERD_CONFIG
-          value: /var/lib/rancher/k3s/agent/etc/containerd/config.toml
-        - name: CONTAINERD_SOCKET
-          value: /run/k3s/containerd/containerd.sock
-        - name: CONTAINERD_RUNTIME_CLASS
-          value: nvidia
-        - name: CONTAINERD_SET_AS_DEFAULT
-          value: "true"
+  valuesFiles:
+  - values.yaml
+
 
 labels:
   app: nvidia-operator
