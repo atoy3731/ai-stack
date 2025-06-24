@@ -30,10 +30,10 @@ extraEnv:
     value: "1"
 #  - name: OLLAMA_KEEP_ALIVE=24h
 #    value: "24h"
- - name: ENABLE_IMAGE_GENERATION
-   value: "True"
- - name: COMFYUI_BASE_URL
-   value: "http://stable-diffusion-webui:7860"
+# - name: ENABLE_IMAGE_GENERATION
+#   value: "True"
+# - name: COMFYUI_BASE_URL
+#   value: "http://stable-diffusion-webui:7860"
 
 
 
