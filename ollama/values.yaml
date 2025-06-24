@@ -16,6 +16,7 @@ ollama:
       - mistral
       - codellama
       - llama3
+      - dolphin-mistral
 
 runtimeClassName: nvidia
 
