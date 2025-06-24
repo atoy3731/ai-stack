@@ -2,9 +2,9 @@ persistentVolume:
   enabled: true
   size: "5Gi"
 
-image:
-  repository: harbor.atoy.dev/public/ollama-cuda
-  tag: latest
+# image:
+#   repository: harbor.atoy.dev/public/ollama-cuda
+#   tag: latest
 
 ollama:
   # gpu:
