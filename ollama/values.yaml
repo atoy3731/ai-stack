@@ -2,6 +2,9 @@ persistentVolume:
   enabled: true
   size: "5Gi"
 
+image:
+  tag: 0.9.2-cuda
+
 ollama:
   # gpu:
   #   enabled: true
