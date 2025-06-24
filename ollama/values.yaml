@@ -3,10 +3,10 @@ persistentVolume:
   size: "5Gi"
 
 ollama:
-  # gpu:
-  #   enabled: true
-  #   type: 'nvidia'
-  #   number: 1
+  gpu:
+    enabled: true
+    type: 'nvidia'
+    number: 1
   models:
     pull:
       - mistral
@@ -16,14 +16,14 @@ ollama:
 runtimeClassName: nvidia
 
 extraEnv:  
-  - name: NVIDIA_VISIBLE_DEVICES
-    value: all
-  - name: NVIDIA_DRIVER_CAPABILITIES
-    value: all
-  - name: OLLAMA_NUM_GPUS
-    value: "1"
-#  - name: OLLAMA_DEBUG
-#    value: "1"
+  # - name: NVIDIA_VISIBLE_DEVICES
+  #   value: all
+  # - name: NVIDIA_DRIVER_CAPABILITIES
+  #   value: all
+  # - name: OLLAMA_NUM_GPUS
+  #   value: "1"
+ - name: OLLAMA_DEBUG
+   value: "1"
 #  - name: OLLAMA_KEEP_ALIVE=24h
 #    value: "24h"
 #  - name: ENABLE_IMAGE_GENERATION
