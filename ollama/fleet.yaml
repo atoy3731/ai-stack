@@ -9,7 +9,7 @@ helm:
 labels:
   app: ollama
 
-dependsOn:
-- selector:
-    matchLabels:
-      app: nvidia-operator
+# dependsOn:
+# - selector:
+#     matchLabels:
+#       app: nvidia-operator
