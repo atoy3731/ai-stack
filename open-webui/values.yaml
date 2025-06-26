@@ -27,6 +27,8 @@ ollamaUrls:
 ingress:
   enabled: true
   host: ai.atoy.lol
+  tls: true
+  existingSecret: "main-cert"
   annotations:
     gethomepage.dev/name: Ollama OpenWeb-UI
     gethomepage.dev/group: AI
