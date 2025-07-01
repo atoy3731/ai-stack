@@ -16,7 +16,7 @@ ollama:
       - mistral
       - codellama
       - llama3
-      - dolphin-mistral
+      # - dolphin-mistral
       # - qwen2.5-coder:32b
 
 runtimeClassName: nvidia
