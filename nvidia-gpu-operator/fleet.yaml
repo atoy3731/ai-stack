@@ -1,7 +1,7 @@
 defaultNamespace: gpu-operator
 helm:
   repo: https://helm.ngc.nvidia.com/nvidia
-  chart: gpu-operator
+  chart: nvidia/gpu-operator
   releaseName: gpu-operator
   version: "v26.3.0"
   valuesFiles:
