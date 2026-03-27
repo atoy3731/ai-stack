@@ -1,6 +1,7 @@
 defaultNamespace: ollama
 helm:
   repo: https://otwld.github.io/ollama-helm/
+  version: 1.53.0
   releaseName: ollama
   chart: ollama
   valuesFiles:
