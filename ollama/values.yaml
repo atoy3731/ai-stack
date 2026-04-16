@@ -18,6 +18,7 @@ ollama:
       - llama3
       - llava:7b
       - gpt-oss:20b
+      - qwen2.5:32b
 
 runtimeClassName: nvidia
 
